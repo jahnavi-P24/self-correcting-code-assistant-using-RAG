@@ -1,0 +1,1202 @@
+[
+  {
+    "task_id": 712,
+    "description": "Write a function to remove duplicates from a list of lists.",
+    "code": "import itertools\r\ndef remove_duplicate(list1):\r\n list.sort(list1)\r\n remove_duplicate = list(list1 for list1,_ in itertools.groupby(list1))\r\n return remove_duplicate",
+    "result": {
+      "original_code": "import itertools\r\ndef remove_duplicate(list1):\r\n list.sort(list1)\r\n remove_duplicate = list(list1 for list1,_ in itertools.groupby(list1))\r\n return remove_duplicate",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06833410263061523,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0693352222442627
+    },
+    "time": 2.1233105659484863
+  },
+  {
+    "task_id": 957,
+    "description": "Write a python function to get the position of rightmost set bit.",
+    "code": "import math\r\ndef get_First_Set_Bit_Pos(n):\r\n     return math.log2(n&-n)+1",
+    "result": {
+      "original_code": "import math\r\ndef get_First_Set_Bit_Pos(n):\r\n     return math.log2(n&-n)+1",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06685638427734375,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0678563117980957
+    },
+    "time": 2.109042167663574
+  },
+  {
+    "task_id": 974,
+    "description": "Write a function to find the minimum total path sum in the given triangle.",
+    "code": "def min_sum_path(A): \r\n\tmemo = [None] * len(A) \r\n\tn = len(A) - 1\r\n\tfor i in range(len(A[n])): \r\n\t\tmemo[i] = A[n][i] \r\n\tfor i in range(len(A) - 2, -1,-1): \r\n\t\tfor j in range( len(A[i])): \r\n\t\t\tmemo[j] = A[i][j] + min(memo[j], \r\n\t\t\t\t\t\t\t\t\tmemo[j + 1]) \r\n\treturn memo[0]",
+    "result": {
+      "original_code": "def min_sum_path(A): \r\n\tmemo = [None] * len(A) \r\n\tn = len(A) - 1\r\n\tfor i in range(len(A[n])): \r\n\t\tmemo[i] = A[n][i] \r\n\tfor i in range(len(A) - 2, -1,-1): \r\n\t\tfor j in range( len(A[i])): \r\n\t\t\tmemo[j] = A[i][j] + min(memo[j], \r\n\t\t\t\t\t\t\t\t\tmemo[j + 1]) \r\n\treturn memo[0]",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06875491142272949,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07075619697570801
+    },
+    "time": 2.13130521774292
+  },
+  {
+    "task_id": 742,
+    "description": "Write a function to caluclate the area of a tetrahedron.",
+    "code": "import math\r\ndef area_tetrahedron(side):\r\n  area = math.sqrt(3)*(side*side)\r\n  return area",
+    "result": {
+      "original_code": "import math\r\ndef area_tetrahedron(side):\r\n  area = math.sqrt(3)*(side*side)\r\n  return area",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06802701950073242,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0690305233001709
+    },
+    "time": 2.1313352584838867
+  },
+  {
+    "task_id": 811,
+    "description": "Write a function to check if two lists of tuples are identical or not.",
+    "code": "def check_identical(test_list1, test_list2):\r\n  res = test_list1 == test_list2\r\n  return (res) ",
+    "result": {
+      "original_code": "def check_identical(test_list1, test_list2):\r\n  res = test_list1 == test_list2\r\n  return (res) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06699919700622559,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06800723075866699
+    },
+    "time": 2.1182572841644287
+  },
+  {
+    "task_id": 740,
+    "description": "Write a function to convert the given tuple to a key-value dictionary using adjacent elements.",
+    "code": "def tuple_to_dict(test_tup):\r\n  res = dict(test_tup[idx : idx + 2] for idx in range(0, len(test_tup), 2))\r\n  return (res) ",
+    "result": {
+      "original_code": "def tuple_to_dict(test_tup):\r\n  res = dict(test_tup[idx : idx + 2] for idx in range(0, len(test_tup), 2))\r\n  return (res) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06853079795837402,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0695335865020752
+    },
+    "time": 2.1234397888183594
+  },
+  {
+    "task_id": 657,
+    "description": "Write a python function to find the first digit in factorial of a given number.",
+    "code": "import math \r\ndef first_Digit(n) : \r\n    fact = 1\r\n    for i in range(2,n + 1) : \r\n        fact = fact * i \r\n        while (fact % 10 == 0) :  \r\n            fact = int(fact / 10) \r\n    while (fact >= 10) : \r\n        fact = int(fact / 10) \r\n    return math.floor(fact) ",
+    "result": {
+      "original_code": "import math \r\ndef first_Digit(n) : \r\n    fact = 1\r\n    for i in range(2,n + 1) : \r\n        fact = fact * i \r\n        while (fact % 10 == 0) :  \r\n            fact = int(fact / 10) \r\n    while (fact >= 10) : \r\n        fact = int(fact / 10) \r\n    return math.floor(fact) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06737804412841797,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06838583946228027
+    },
+    "time": 2.131929397583008
+  },
+  {
+    "task_id": 773,
+    "description": "Write a function to find the occurrence and position of the substrings within a string.",
+    "code": "import re\r\ndef occurance_substring(text,pattern):\r\n for match in re.finditer(pattern, text):\r\n    s = match.start()\r\n    e = match.end()\r\n    return (text[s:e], s, e)",
+    "result": {
+      "original_code": "import re\r\ndef occurance_substring(text,pattern):\r\n for match in re.finditer(pattern, text):\r\n    s = match.start()\r\n    e = match.end()\r\n    return (text[s:e], s, e)",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07861137390136719,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07861137390136719
+    },
+    "time": 2.1147541999816895
+  },
+  {
+    "task_id": 789,
+    "description": "Write a function to calculate the perimeter of a regular polygon.",
+    "code": "from math import tan, pi\r\ndef perimeter_polygon(s,l):\r\n  perimeter = s*l\r\n  return perimeter",
+    "result": {
+      "original_code": "from math import tan, pi\r\ndef perimeter_polygon(s,l):\r\n  perimeter = s*l\r\n  return perimeter",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06737995147705078,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06837677955627441
+    },
+    "time": 2.1293270587921143
+  },
+  {
+    "task_id": 870,
+    "description": "Write a function to calculate the sum of the positive numbers of a given list of numbers using lambda function.",
+    "code": "def sum_positivenum(nums):\r\n  sum_positivenum = list(filter(lambda nums:nums>0,nums))\r\n  return sum(sum_positivenum)",
+    "result": {
+      "original_code": "def sum_positivenum(nums):\r\n  sum_positivenum = list(filter(lambda nums:nums>0,nums))\r\n  return sum(sum_positivenum)",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06857132911682129,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0695650577545166
+    },
+    "time": 2.0986499786376953
+  },
+  {
+    "task_id": 868,
+    "description": "Write a python function to find the length of the last word in a given string.",
+    "code": "def length_Of_Last_Word(a): \r\n    l = 0\r\n    x = a.strip() \r\n    for i in range(len(x)): \r\n        if x[i] == \" \": \r\n            l = 0\r\n        else: \r\n            l += 1\r\n    return l ",
+    "result": {
+      "original_code": "def length_Of_Last_Word(a): \r\n    l = 0\r\n    x = a.strip() \r\n    for i in range(len(x)): \r\n        if x[i] == \" \": \r\n            l = 0\r\n        else: \r\n            l += 1\r\n    return l ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06800007820129395,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06800007820129395
+    },
+    "time": 2.1123523712158203
+  },
+  {
+    "task_id": 624,
+    "description": "Write a python function to convert the given string to upper case.",
+    "code": "def is_upper(string):\r\n  return (string.upper())",
+    "result": {
+      "original_code": "def is_upper(string):\r\n  return (string.upper())",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.068450927734375,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06945228576660156
+    },
+    "time": 2.1333234310150146
+  },
+  {
+    "task_id": 601,
+    "description": "Write a function to find the longest chain which can be formed from the given set of pairs.",
+    "code": "class Pair(object): \r\n\tdef __init__(self, a, b): \r\n\t\tself.a = a \r\n\t\tself.b = b \r\ndef max_chain_length(arr, n): \r\n\tmax = 0\r\n\tmcl = [1 for i in range(n)] \r\n\tfor i in range(1, n): \r\n\t\tfor j in range(0, i): \r\n\t\t\tif (arr[i].a > arr[j].b and\r\n\t\t\t\tmcl[i] < mcl[j] + 1): \r\n\t\t\t\tmcl[i] = mcl[j] + 1\r\n\tfor i in range(n): \r\n\t\tif (max < mcl[i]): \r\n\t\t\tmax = mcl[i] \r\n\treturn max",
+    "result": {
+      "original_code": "class Pair(object): \r\n\tdef __init__(self, a, b): \r\n\t\tself.a = a \r\n\t\tself.b = b \r\ndef max_chain_length(arr, n): \r\n\tmax = 0\r\n\tmcl = [1 for i in range(n)] \r\n\tfor i in range(1, n): \r\n\t\tfor j in range(0, i): \r\n\t\t\tif (arr[i].a > arr[j].b and\r\n\t\t\t\tmcl[i] < mcl[j] + 1): \r\n\t\t\t\tmcl[i] = mcl[j] + 1\r\n\tfor i in range(n): \r\n\t\tif (max < mcl[i]): \r\n\t\t\tmax = mcl[i] \r\n\treturn max",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06705021858215332,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06904220581054688
+    },
+    "time": 2.1213197708129883
+  },
+  {
+    "task_id": 887,
+    "description": "Write a python function to check whether the given number is odd or not using bitwise operator.",
+    "code": "def is_odd(n) : \r\n    if (n^1 == n-1) :\r\n        return True; \r\n    else :\r\n        return False; ",
+    "result": {
+      "original_code": "def is_odd(n) : \r\n    if (n^1 == n-1) :\r\n        return True; \r\n    else :\r\n        return False; ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06892919540405273,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06993460655212402
+    },
+    "time": 2.092292308807373
+  },
+  {
+    "task_id": 735,
+    "description": "Write a python function to toggle bits of the number except the first and the last bit.",
+    "code": "def set_middle_bits(n):  \r\n    n |= n >> 1; \r\n    n |= n >> 2; \r\n    n |= n >> 4; \r\n    n |= n >> 8; \r\n    n |= n >> 16;  \r\n    return (n >> 1) ^ 1\r\ndef toggle_middle_bits(n): \r\n    if (n == 1): \r\n        return 1\r\n    return n ^ set_middle_bits(n) ",
+    "result": {
+      "original_code": "def set_middle_bits(n):  \r\n    n |= n >> 1; \r\n    n |= n >> 2; \r\n    n |= n >> 4; \r\n    n |= n >> 8; \r\n    n |= n >> 16;  \r\n    return (n >> 1) ^ 1\r\ndef toggle_middle_bits(n): \r\n    if (n == 1): \r\n        return 1\r\n    return n ^ set_middle_bits(n) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06936883926391602,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06936883926391602
+    },
+    "time": 2.118288040161133
+  },
+  {
+    "task_id": 711,
+    "description": "Write a python function to check whether the product of digits of a number at even and odd places is equal or not.",
+    "code": "def product_Equal(n): \r\n    if n < 10: \r\n        return False\r\n    prodOdd = 1; prodEven = 1\r\n    while n > 0: \r\n        digit = n % 10\r\n        prodOdd *= digit \r\n        n = n//10\r\n        if n == 0: \r\n            break; \r\n        digit = n % 10\r\n        prodEven *= digit \r\n        n = n//10\r\n    if prodOdd == prodEven: \r\n        return True\r\n    return False",
+    "result": {
+      "original_code": "def product_Equal(n): \r\n    if n < 10: \r\n        return False\r\n    prodOdd = 1; prodEven = 1\r\n    while n > 0: \r\n        digit = n % 10\r\n        prodOdd *= digit \r\n        n = n//10\r\n        if n == 0: \r\n            break; \r\n        digit = n % 10\r\n        prodEven *= digit \r\n        n = n//10\r\n    if prodOdd == prodEven: \r\n        return True\r\n    return False",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07074546813964844,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07126688957214355
+    },
+    "time": 2.1127750873565674
+  },
+  {
+    "task_id": 853,
+    "description": "Write a python function to find sum of odd factors of a number.",
+    "code": "import math\r\ndef sum_of_odd_Factors(n): \r\n    res = 1\r\n    while n % 2 == 0: \r\n        n = n // 2 \r\n    for i in range(3,int(math.sqrt(n) + 1)): \r\n        count = 0\r\n        curr_sum = 1\r\n        curr_term = 1\r\n        while n % i == 0: \r\n            count+=1 \r\n            n = n // i \r\n            curr_term *= i \r\n            curr_sum += curr_term    \r\n        res *= curr_sum  \r\n    if n >= 2: \r\n        res *= (1 + n) \r\n    return res ",
+    "result": {
+      "original_code": "import math\r\ndef sum_of_odd_Factors(n): \r\n    res = 1\r\n    while n % 2 == 0: \r\n        n = n // 2 \r\n    for i in range(3,int(math.sqrt(n) + 1)): \r\n        count = 0\r\n        curr_sum = 1\r\n        curr_term = 1\r\n        while n % i == 0: \r\n            count+=1 \r\n            n = n // i \r\n            curr_term *= i \r\n            curr_sum += curr_term    \r\n        res *= curr_sum  \r\n    if n >= 2: \r\n        res *= (1 + n) \r\n    return res ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06917810440063477,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06969714164733887
+    },
+    "time": 2.1151907444000244
+  },
+  {
+    "task_id": 724,
+    "description": "Write a function to calculate the sum of all digits of the base to the specified power.",
+    "code": "def power_base_sum(base, power):\r\n    return sum([int(i) for i in str(pow(base, power))])",
+    "result": {
+      "original_code": "def power_base_sum(base, power):\r\n    return sum([int(i) for i in str(pow(base, power))])",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0721445083618164,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0721445083618164
+    },
+    "time": 2.1138556003570557
+  },
+  {
+    "task_id": 971,
+    "description": "Write a function to find the maximum number of segments of lengths a, b and c that can be formed from n.",
+    "code": "def maximum_segments(n, a, b, c) : \r\n\tdp = [-1] * (n + 10) \r\n\tdp[0] = 0\r\n\tfor i in range(0, n) : \r\n\t\tif (dp[i] != -1) : \r\n\t\t\tif(i + a <= n ): \r\n\t\t\t\tdp[i + a] = max(dp[i] + 1, \r\n\t\t\t\t\t\t\tdp[i + a]) \r\n\t\t\tif(i + b <= n ): \r\n\t\t\t\tdp[i + b] = max(dp[i] + 1, \r\n\t\t\t\t\t\t\tdp[i + b]) \r\n\t\t\tif(i + c <= n ): \r\n\t\t\t\tdp[i + c] = max(dp[i] + 1, \r\n\t\t\t\t\t\t\tdp[i + c]) \r\n\treturn dp[n]",
+    "result": {
+      "original_code": "def maximum_segments(n, a, b, c) : \r\n\tdp = [-1] * (n + 10) \r\n\tdp[0] = 0\r\n\tfor i in range(0, n) : \r\n\t\tif (dp[i] != -1) : \r\n\t\t\tif(i + a <= n ): \r\n\t\t\t\tdp[i + a] = max(dp[i] + 1, \r\n\t\t\t\t\t\t\tdp[i + a]) \r\n\t\t\tif(i + b <= n ): \r\n\t\t\t\tdp[i + b] = max(dp[i] + 1, \r\n\t\t\t\t\t\t\tdp[i + b]) \r\n\t\t\tif(i + c <= n ): \r\n\t\t\t\tdp[i + c] = max(dp[i] + 1, \r\n\t\t\t\t\t\t\tdp[i + c]) \r\n\treturn dp[n]",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07126808166503906,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07126808166503906
+    },
+    "time": 2.0820131301879883
+  },
+  {
+    "task_id": 820,
+    "description": "Write a function to check whether the given month number contains 28 days or not.",
+    "code": "def check_monthnum_number(monthnum1):\r\n  if monthnum1 == 2:\r\n    return True\r\n  else:\r\n    return False",
+    "result": {
+      "original_code": "def check_monthnum_number(monthnum1):\r\n  if monthnum1 == 2:\r\n    return True\r\n  else:\r\n    return False",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07951211929321289,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.08051848411560059
+    },
+    "time": 2.10396146774292
+  },
+  {
+    "task_id": 968,
+    "description": "Write a python function to find maximum possible value for the given periodic function.",
+    "code": "def floor_Max(A,B,N):\r\n    x = min(B - 1,N)\r\n    return (A*x) // B",
+    "result": {
+      "original_code": "def floor_Max(A,B,N):\r\n    x = min(B - 1,N)\r\n    return (A*x) // B",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07017326354980469,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07017326354980469
+    },
+    "time": 2.114990472793579
+  },
+  {
+    "task_id": 831,
+    "description": "Write a python function to count equal element pairs from the given array.",
+    "code": "def count_Pairs(arr,n): \r\n    cnt = 0; \r\n    for i in range(n): \r\n        for j in range(i + 1,n): \r\n            if (arr[i] == arr[j]): \r\n                cnt += 1; \r\n    return cnt; ",
+    "result": {
+      "original_code": "def count_Pairs(arr,n): \r\n    cnt = 0; \r\n    for i in range(n): \r\n        for j in range(i + 1,n): \r\n            if (arr[i] == arr[j]): \r\n                cnt += 1; \r\n    return cnt; ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0704033374786377,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0704033374786377
+    },
+    "time": 2.1063830852508545
+  },
+  {
+    "task_id": 774,
+    "description": "Write a function to check if the string is a valid email address or not using regex.",
+    "code": "import re \r\nregex = '^[a-z0-9]+[\\._]?[a-z0-9]+[@]\\w+[.]\\w{2,3}$'\r\ndef check_email(email): \r\n\tif(re.search(regex,email)): \r\n\t\treturn (\"Valid Email\") \r\n\telse: \r\n\t\treturn (\"Invalid Email\") ",
+    "result": {
+      "original_code": "import re \r\nregex = '^[a-z0-9]+[\\._]?[a-z0-9]+[@]\\w+[.]\\w{2,3}$'\r\ndef check_email(email): \r\n\tif(re.search(regex,email)): \r\n\t\treturn (\"Valid Email\") \r\n\telse: \r\n\t\treturn (\"Invalid Email\") ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0824737548828125,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.08347630500793457
+    },
+    "time": 2.130280017852783
+  },
+  {
+    "task_id": 879,
+    "description": "Write a function that matches a string that has an 'a' followed by anything, ending in 'b' by using regex.",
+    "code": "import re\r\ndef text_match(text):\r\n  patterns = 'a.*?b$'\r\n  if re.search(patterns,  text):\r\n    return ('Found a match!')\r\n  else:\r\n    return ('Not matched!')",
+    "result": {
+      "original_code": "import re\r\ndef text_match(text):\r\n  patterns = 'a.*?b$'\r\n  if re.search(patterns,  text):\r\n    return ('Found a match!')\r\n  else:\r\n    return ('Not matched!')",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0809321403503418,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.08293008804321289
+    },
+    "time": 2.155148983001709
+  },
+  {
+    "task_id": 733,
+    "description": "Write a function to find the index of the first occurrence of a given number in a sorted array.",
+    "code": "def find_first_occurrence(A, x):\r\n    (left, right) = (0, len(A) - 1)\r\n    result = -1\r\n    while left <= right:\r\n        mid = (left + right) // 2\r\n        if x == A[mid]:\r\n            result = mid\r\n            right = mid - 1\r\n        elif x < A[mid]:\r\n            right = mid - 1\r\n        else:\r\n            left = mid + 1\r\n    return result",
+    "result": {
+      "original_code": "def find_first_occurrence(A, x):\r\n    (left, right) = (0, len(A) - 1)\r\n    result = -1\r\n    while left <= right:\r\n        mid = (left + right) // 2\r\n        if x == A[mid]:\r\n            result = mid\r\n            right = mid - 1\r\n        elif x < A[mid]:\r\n            right = mid - 1\r\n        else:\r\n            left = mid + 1\r\n    return result",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0683286190032959,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0683286190032959
+    },
+    "time": 2.1172585487365723
+  },
+  {
+    "task_id": 859,
+    "description": "Write a function to generate all sublists of a given list.",
+    "code": "from itertools import combinations\r\ndef sub_lists(my_list):\r\n\tsubs = []\r\n\tfor i in range(0, len(my_list)+1):\r\n\t  temp = [list(x) for x in combinations(my_list, i)]\r\n\t  if len(temp)>0:\r\n\t    subs.extend(temp)\r\n\treturn subs",
+    "result": {
+      "original_code": "from itertools import combinations\r\ndef sub_lists(my_list):\r\n\tsubs = []\r\n\tfor i in range(0, len(my_list)+1):\r\n\t  temp = [list(x) for x in combinations(my_list, i)]\r\n\t  if len(temp)>0:\r\n\t    subs.extend(temp)\r\n\treturn subs",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.08020496368408203,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.08120322227478027
+    },
+    "time": 2.1292080879211426
+  },
+  {
+    "task_id": 753,
+    "description": "Write a function to find minimum k records from tuple list.",
+    "code": "def min_k(test_list, K):\r\n  res = sorted(test_list, key = lambda x: x[1])[:K]\r\n  return (res) ",
+    "result": {
+      "original_code": "def min_k(test_list, K):\r\n  res = sorted(test_list, key = lambda x: x[1])[:K]\r\n  return (res) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07254505157470703,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07358336448669434
+    },
+    "time": 2.1183741092681885
+  },
+  {
+    "task_id": 716,
+    "description": "Write a function to find the perimeter of a rombus.",
+    "code": "def rombus_perimeter(a):\r\n  perimeter=4*a\r\n  return perimeter",
+    "result": {
+      "original_code": "def rombus_perimeter(a):\r\n  perimeter=4*a\r\n  return perimeter",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06561732292175293,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06713271141052246
+    },
+    "time": 2.105628490447998
+  },
+  {
+    "task_id": 675,
+    "description": "Write a function to add two integers. however, if the sum is between the given range it will return 20.",
+    "code": "def sum_nums(x, y,m,n):\r\n    sum_nums= x + y\r\n    if sum_nums in range(m, n):\r\n        return 20\r\n    else:\r\n        return sum_nums",
+    "result": {
+      "original_code": "def sum_nums(x, y,m,n):\r\n    sum_nums= x + y\r\n    if sum_nums in range(m, n):\r\n        return 20\r\n    else:\r\n        return sum_nums",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06835770606994629,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0693659782409668
+    },
+    "time": 2.1268653869628906
+  },
+  {
+    "task_id": 808,
+    "description": "Write a function to check if the given tuples contain the k or not.",
+    "code": "def check_K(test_tup, K):\r\n  res = False\r\n  for ele in test_tup:\r\n    if ele == K:\r\n      res = True\r\n      break\r\n  return (res) ",
+    "result": {
+      "original_code": "def check_K(test_tup, K):\r\n  res = False\r\n  for ele in test_tup:\r\n    if ele == K:\r\n      res = True\r\n      break\r\n  return (res) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06813883781433105,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06914091110229492
+    },
+    "time": 2.1285696029663086
+  },
+  {
+    "task_id": 852,
+    "description": "Write a python function to remove negative numbers from a list.",
+    "code": "def remove_negs(num_list): \r\n    for item in num_list: \r\n        if item < 0: \r\n           num_list.remove(item) \r\n    return num_list",
+    "result": {
+      "original_code": "def remove_negs(num_list): \r\n    for item in num_list: \r\n        if item < 0: \r\n           num_list.remove(item) \r\n    return num_list",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06838726997375488,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06938648223876953
+    },
+    "time": 2.1341817378997803
+  },
+  {
+    "task_id": 953,
+    "description": "Write a python function to find the minimun number of subsets with distinct elements.",
+    "code": "def subset(ar, n): \r\n    res = 0\r\n    ar.sort() \r\n    for i in range(0, n) : \r\n        count = 1\r\n        for i in range(n - 1): \r\n            if ar[i] == ar[i + 1]: \r\n                count+=1\r\n            else: \r\n                break \r\n        res = max(res, count)  \r\n    return res ",
+    "result": {
+      "original_code": "def subset(ar, n): \r\n    res = 0\r\n    ar.sort() \r\n    for i in range(0, n) : \r\n        count = 1\r\n        for i in range(n - 1): \r\n            if ar[i] == ar[i + 1]: \r\n                count+=1\r\n            else: \r\n                break \r\n        res = max(res, count)  \r\n    return res ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06792140007019043,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06992053985595703
+    },
+    "time": 2.1004741191864014
+  },
+  {
+    "task_id": 755,
+    "description": "Write a function to find the second smallest number in a list.",
+    "code": "def second_smallest(numbers):\r\n  if (len(numbers)<2):\r\n    return\r\n  if ((len(numbers)==2)  and (numbers[0] == numbers[1]) ):\r\n    return\r\n  dup_items = set()\r\n  uniq_items = []\r\n  for x in numbers:\r\n    if x not in dup_items:\r\n      uniq_items.append(x)\r\n      dup_items.add(x)\r\n  uniq_items.sort()    \r\n  return  uniq_items[1] ",
+    "result": {
+      "original_code": "def second_smallest(numbers):\r\n  if (len(numbers)<2):\r\n    return\r\n  if ((len(numbers)==2)  and (numbers[0] == numbers[1]) ):\r\n    return\r\n  dup_items = set()\r\n  uniq_items = []\r\n  for x in numbers:\r\n    if x not in dup_items:\r\n      uniq_items.append(x)\r\n      dup_items.add(x)\r\n  uniq_items.sort()    \r\n  return  uniq_items[1] ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07120919227600098,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07120919227600098
+    },
+    "time": 2.0997157096862793
+  },
+  {
+    "task_id": 828,
+    "description": "Write a function to count alphabets,digits and special charactes in a given string.",
+    "code": "def count_alpha_dig_spl(string):\r\n  alphabets=digits = special = 0\r\n  for i in range(len(string)):\r\n    if(string[i].isalpha()):\r\n        alphabets = alphabets + 1\r\n    elif(string[i].isdigit()):\r\n        digits = digits + 1\r\n    else:\r\n        special = special + 1\r\n  return (alphabets,digits,special)   ",
+    "result": {
+      "original_code": "def count_alpha_dig_spl(string):\r\n  alphabets=digits = special = 0\r\n  for i in range(len(string)):\r\n    if(string[i].isalpha()):\r\n        alphabets = alphabets + 1\r\n    elif(string[i].isdigit()):\r\n        digits = digits + 1\r\n    else:\r\n        special = special + 1\r\n  return (alphabets,digits,special)   ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07470083236694336,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07470083236694336
+    },
+    "time": 2.1203229427337646
+  },
+  {
+    "task_id": 705,
+    "description": "Write a function to sort a list of lists by length and value.",
+    "code": "def sort_sublists(list1):\r\n      list1.sort()  \r\n      list1.sort(key=len)\r\n      return  list1",
+    "result": {
+      "original_code": "def sort_sublists(list1):\r\n      list1.sort()  \r\n      list1.sort(key=len)\r\n      return  list1",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06847476959228516,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0694730281829834
+    },
+    "time": 2.125664472579956
+  },
+  {
+    "task_id": 805,
+    "description": "Write a function to find the list in a list of lists whose sum of elements is the highest.",
+    "code": "def max_sum_list(lists):\r\n return max(lists, key=sum)",
+    "result": {
+      "original_code": "def max_sum_list(lists):\r\n return max(lists, key=sum)",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06733202934265137,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06934666633605957
+    },
+    "time": 2.1296298503875732
+  },
+  {
+    "task_id": 660,
+    "description": "Write a python function to choose points from two ranges such that no point lies in both the ranges.",
+    "code": "def find_Points(l1,r1,l2,r2): \r\n    x = min(l1,l2) if (l1 != l2) else -1\r\n    y = max(r1,r2) if (r1 != r2) else -1\r\n    return (x,y)",
+    "result": {
+      "original_code": "def find_Points(l1,r1,l2,r2): \r\n    x = min(l1,l2) if (l1 != l2) else -1\r\n    y = max(r1,r2) if (r1 != r2) else -1\r\n    return (x,y)",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06754517555236816,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06854510307312012
+    },
+    "time": 2.118155002593994
+  },
+  {
+    "task_id": 906,
+    "description": "Write a function to extract year, month and date from a url by using regex.",
+    "code": "import re\r\ndef extract_date(url):\r\n        return re.findall(r'/(\\d{4})/(\\d{1,2})/(\\d{1,2})/', url)",
+    "result": {
+      "original_code": "import re\r\ndef extract_date(url):\r\n        return re.findall(r'/(\\d{4})/(\\d{1,2})/(\\d{1,2})/', url)",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07805824279785156,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0790565013885498
+    },
+    "time": 2.105250358581543
+  },
+  {
+    "task_id": 756,
+    "description": "Write a function that matches a string that has an a followed by zero or one 'b'.",
+    "code": "import re\r\ndef text_match_zero_one(text):\r\n        patterns = 'ab?'\r\n        if re.search(patterns,  text):\r\n                return 'Found a match!'\r\n        else:\r\n                return('Not matched!')",
+    "result": {
+      "original_code": "import re\r\ndef text_match_zero_one(text):\r\n        patterns = 'ab?'\r\n        if re.search(patterns,  text):\r\n                return 'Found a match!'\r\n        else:\r\n                return('Not matched!')",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07861185073852539,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.08061718940734863
+    },
+    "time": 2.1465232372283936
+  },
+  {
+    "task_id": 814,
+    "description": "Write a function to find the area of a rombus.",
+    "code": "def rombus_area(p,q):\r\n  area=(p*q)/2\r\n  return area",
+    "result": {
+      "original_code": "def rombus_area(p,q):\r\n  area=(p*q)/2\r\n  return area",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06812906265258789,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07013130187988281
+    },
+    "time": 2.1081533432006836
+  },
+  {
+    "task_id": 632,
+    "description": "Write a python function to move all zeroes to the end of the given list.",
+    "code": "def move_zero(num_list):\r\n    a = [0 for i in range(num_list.count(0))]\r\n    x = [ i for i in num_list if i != 0]\r\n    x.extend(a)\r\n    return (x)",
+    "result": {
+      "original_code": "def move_zero(num_list):\r\n    a = [0 for i in range(num_list.count(0))]\r\n    x = [ i for i in num_list if i != 0]\r\n    x.extend(a)\r\n    return (x)",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07151556015014648,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07251620292663574
+    },
+    "time": 2.1198716163635254
+  },
+  {
+    "task_id": 958,
+    "description": "Write a function to convert an integer into a roman numeral.",
+    "code": "def int_to_roman( num):\r\n        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]\r\n        syb = [\"M\", \"CM\", \"D\", \"CD\",\"C\", \"XC\", \"L\", \"XL\",\"X\", \"IX\", \"V\", \"IV\",\"I\"]\r\n        roman_num = ''\r\n        i = 0\r\n        while  num > 0:\r\n            for _ in range(num // val[i]):\r\n                roman_num += syb[i]\r\n                num -= val[i]\r\n            i += 1\r\n        return roman_num",
+    "result": {
+      "original_code": "def int_to_roman( num):\r\n        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]\r\n        syb = [\"M\", \"CM\", \"D\", \"CD\",\"C\", \"XC\", \"L\", \"XL\",\"X\", \"IX\", \"V\", \"IV\",\"I\"]\r\n        roman_num = ''\r\n        i = 0\r\n        while  num > 0:\r\n            for _ in range(num // val[i]):\r\n                roman_num += syb[i]\r\n                num -= val[i]\r\n            i += 1\r\n        return roman_num",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0735173225402832,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.0735173225402832
+    },
+    "time": 2.116384506225586
+  },
+  {
+    "task_id": 619,
+    "description": "Write a function to move all the numbers in it to the given string.",
+    "code": "def move_num(test_str):\r\n  res = ''\r\n  dig = ''\r\n  for ele in test_str:\r\n    if ele.isdigit():\r\n      dig += ele\r\n    else:\r\n      res += ele\r\n  res += dig\r\n  return (res) ",
+    "result": {
+      "original_code": "def move_num(test_str):\r\n  res = ''\r\n  dig = ''\r\n  for ele in test_str:\r\n    if ele.isdigit():\r\n      dig += ele\r\n    else:\r\n      res += ele\r\n  res += dig\r\n  return (res) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0716090202331543,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07260870933532715
+    },
+    "time": 2.1284677982330322
+  },
+  {
+    "task_id": 964,
+    "description": "Write a python function to check whether the length of the word is even or not.",
+    "code": "def word_len(s): \r\n    s = s.split(' ')   \r\n    for word in s:    \r\n        if len(word)%2==0: \r\n            return True  \r\n        else:\r\n          return False",
+    "result": {
+      "original_code": "def word_len(s): \r\n    s = s.split(' ')   \r\n    for word in s:    \r\n        if len(word)%2==0: \r\n            return True  \r\n        else:\r\n          return False",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0669710636138916,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06898641586303711
+    },
+    "time": 2.1285359859466553
+  },
+  {
+    "task_id": 898,
+    "description": "Write a function to extract specified number of elements from a given list, which follow each other continuously.",
+    "code": "from itertools import groupby \r\ndef extract_elements(numbers, n):\r\n    result = [i for i, j in groupby(numbers) if len(list(j)) == n] \r\n    return result",
+    "result": {
+      "original_code": "from itertools import groupby \r\ndef extract_elements(numbers, n):\r\n    result = [i for i, j in groupby(numbers) if len(list(j)) == n] \r\n    return result",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06585693359375,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.06585693359375
+    },
+    "time": 2.1320574283599854
+  },
+  {
+    "task_id": 845,
+    "description": "Write a python function to count the number of digits in factorial of a given number.",
+    "code": "import math \r\ndef find_Digits(n): \r\n    if (n < 0): \r\n        return 0;\r\n    if (n <= 1): \r\n        return 1; \r\n    x = ((n * math.log10(n / math.e) + math.log10(2 * math.pi * n) /2.0)); \r\n    return math.floor(x) + 1; ",
+    "result": {
+      "original_code": "import math \r\ndef find_Digits(n): \r\n    if (n < 0): \r\n        return 0;\r\n    if (n <= 1): \r\n        return 1; \r\n    x = ((n * math.log10(n / math.e) + math.log10(2 * math.pi * n) /2.0)); \r\n    return math.floor(x) + 1; ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.06816649436950684,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07016849517822266
+    },
+    "time": 2.1350693702697754
+  },
+  {
+    "task_id": 644,
+    "description": "Write a python function to reverse an array upto a given position.",
+    "code": "def reverse_Array_Upto_K(input, k): \r\n  return (input[k-1::-1] + input[k:]) ",
+    "result": {
+      "original_code": "def reverse_Array_Upto_K(input, k): \r\n  return (input[k-1::-1] + input[k:]) ",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07334470748901367,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07435154914855957
+    },
+    "time": 2.1015708446502686
+  },
+  {
+    "task_id": 764,
+    "description": "Write a python function to count numeric values in a given string.",
+    "code": "def number_ctr(str):\r\n      number_ctr= 0\r\n      for i in range(len(str)):\r\n          if str[i] >= '0' and str[i] <= '9': number_ctr += 1     \r\n      return  number_ctr",
+    "result": {
+      "original_code": "def number_ctr(str):\r\n      number_ctr= 0\r\n      for i in range(len(str)):\r\n          if str[i] >= '0' and str[i] <= '9': number_ctr += 1     \r\n      return  number_ctr",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.08532476425170898,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.08725857734680176
+    },
+    "time": 2.135523796081543
+  },
+  {
+    "task_id": 916,
+    "description": "Write a function to find if there is a triplet in the array whose sum is equal to a given value.",
+    "code": "def find_triplet_array(A, arr_size, sum): \r\n\tfor i in range( 0, arr_size-2): \r\n\t\tfor j in range(i + 1, arr_size-1): \r\n\t\t\tfor k in range(j + 1, arr_size): \r\n\t\t\t\tif A[i] + A[j] + A[k] == sum: \r\n\t\t\t\t\treturn  A[i],A[j],A[k] \r\n\t\t\t\t\treturn True\r\n\treturn False",
+    "result": {
+      "original_code": "def find_triplet_array(A, arr_size, sum): \r\n\tfor i in range( 0, arr_size-2): \r\n\t\tfor j in range(i + 1, arr_size-1): \r\n\t\t\tfor k in range(j + 1, arr_size): \r\n\t\t\t\tif A[i] + A[j] + A[k] == sum: \r\n\t\t\t\t\treturn  A[i],A[j],A[k] \r\n\t\t\t\t\treturn True\r\n\treturn False",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.07503819465637207,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07703685760498047
+    },
+    "time": 2.093940019607544
+  },
+  {
+    "task_id": 648,
+    "description": "Write a function to exchange the position of every n-th value with (n+1)th value and (n+1)th value with n-th value in a given list.",
+    "code": "from itertools import zip_longest, chain, tee\r\ndef exchange_elements(lst):\r\n    lst1, lst2 = tee(iter(lst), 2)\r\n    return list(chain.from_iterable(zip_longest(lst[1::2], lst[::2])))",
+    "result": {
+      "original_code": "from itertools import zip_longest, chain, tee\r\ndef exchange_elements(lst):\r\n    lst1, lst2 = tee(iter(lst), 2)\r\n    return list(chain.from_iterable(zip_longest(lst[1::2], lst[::2])))",
+      "processed_code": null,
+      "explanation": null,
+      "hints": null,
+      "errors": null,
+      "warnings": null,
+      "suggestions": null,
+      "execution_result": {
+        "stdout": "",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time": 0.0787816047668457,
+        "libraries_detected": []
+      },
+      "performance_metrics": null,
+      "processing_time": 0.07978630065917969
+    },
+    "time": 2.1065077781677246
+  }
+]
